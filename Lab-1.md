@@ -25,3 +25,20 @@ This lab is intended for:
 # Lab Prerequisites
 You should be familiar with:
 - Basic concepts of Cloud Service Providers
+
+# Introduction
+Terraform uses configuration files ending in .tf to deploy and manage infrastructure. These configuration files are written in HashiCorp Configuration Language (HCL), designed to be both very human-readable and machine friendly. 
+HCL serves the purpose of managing infrastructure, which means it must be simple enough to be "living documentation" of a system or environment. The  components created  in  HCL are described in blocks similar to JSON:
+
+```hcl
+<BLOCK TYPE> "<BLOCK LABEL>" "<BLOCK LABEL>" {
+  # Block body
+  <IDENTIFIER> = <EXPRESSION> # Argument
+}
+```
+The block type is stated first. The first block label usually determines the kind of block type and the second block label is typically a "name tag" that can be given to that block. Inside the blocks are called arguments, these are key value pairs that make up the configuration of each block.
+
+In this lab step, you will create a Terraform configuration to deploy a Virtual Network.
+
+# Instructions
+1. Before you begin working with this lab, ensure that the provided environment and IDE development environment have fully provisioned:
